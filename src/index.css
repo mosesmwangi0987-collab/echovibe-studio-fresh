@@ -4,8 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: theme('fontFamily.body');
-  @apply bg-neutral-light text-neutral-dark;
+@layer base {
+  body {
+    margin: 0;
+    font-family: theme('fontFamily.body');
+    background-color: #F9FAFB; /* Direct hex for light bg (fallback) */
+    color: #111827; /* Direct hex for dark text */
+  }
 }
